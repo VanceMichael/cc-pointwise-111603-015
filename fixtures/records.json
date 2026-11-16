@@ -1,20 +1,17 @@
 [
   {
-    "sourceId": "air-quality-demo-1",
-    "source": "sample-source",
-    "observedAt": "2026-11-16T09:00:00Z",
-    "label": "小时观测",
+    "sourceId": "S1-08",
+    "source": "站点观测接收器",
+    "observedAt": "2026-11-16T08:00:00Z",
+    "label": "S1",
     "attributes": {
-      "sample": true
-    }
-  },
-  {
-    "sourceId": "air-quality-demo-2",
-    "source": "sample-source",
-    "observedAt": "2026-11-16T09:05:00Z",
-    "label": "小时观测 2",
-    "attributes": {
-      "sample": true
+      "observationId": "S1-08",
+      "station": "S1",
+      "hour": "2026-11-16T08:00:00Z",
+      "value": 35,
+      "unit": "ug/m3",
+      "quality": "provisional",
+      "revision": 1
     }
   }
 ]

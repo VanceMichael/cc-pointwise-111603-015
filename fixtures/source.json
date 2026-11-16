@@ -1,0 +1,58 @@
+{
+  "stages": {
+    "opening": {
+      "routes": {
+        "/stations/S1/hourly": {
+          "contentType": "application/json",
+          "body": {
+            "items": [
+              {
+                "observationId": "S1-08",
+                "station": "S1",
+                "hour": "2026-11-16T08:00:00Z",
+                "value": 35,
+                "unit": "ug/m3",
+                "quality": "provisional",
+                "revision": 1
+              }
+            ],
+            "next": null
+          },
+          "etag": "\"opening\""
+        }
+      }
+    },
+    "updated": {
+      "routes": {
+        "/stations/S1/hourly": {
+          "contentType": "application/json",
+          "body": {
+            "items": [
+              {
+                "observationId": "S1-08",
+                "station": "S1",
+                "hour": "2026-11-16T08:00:00Z",
+                "value": 31,
+                "unit": "ug/m3",
+                "quality": "validated",
+                "revision": 2
+              },
+              {
+                "observationId": "S2-08",
+                "station": "S2",
+                "hour": "2026-11-16T08:00:00Z",
+                "value": null,
+                "unit": "ug/m3",
+                "quality": "missing",
+                "reason": "maintenance",
+                "revision": 1
+              }
+            ],
+            "next": null
+          },
+          "etag": "\"updated\""
+        }
+      }
+    }
+  }
+}

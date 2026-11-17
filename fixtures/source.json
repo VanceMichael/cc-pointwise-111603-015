@@ -53,6 +53,37 @@
           "etag": "\"updated\""
         }
       }
+    },
+    "corrected": {
+      "routes": {
+        "/stations/S1/hourly": {
+          "contentType": "application/json",
+          "body": {
+            "items": [
+              {
+                "observationId": "S1-08",
+                "station": "S1",
+                "hour": "2026-11-16T08:00:00Z",
+                "value": 28,
+                "unit": "ug/m3",
+                "quality": "validated",
+                "revision": 3
+              },
+              {
+                "observationId": "S2-08",
+                "station": "S2",
+                "hour": "2026-11-16T08:00:00Z",
+                "value": 41,
+                "unit": "ug/m3",
+                "quality": "validated",
+                "revision": 2
+              }
+            ],
+            "next": null
+          },
+          "etag": "\"corrected\""
+        }
+      }
     }
   }
 }

@@ -9,3 +9,5 @@ observationId 对应站点小时，revision 是质控更正版本；quality 为 
 ## 业务消费
 
 `readOperations(repository)` 当前返回 product 和 rows，每行带 sourceId/source/observedAt/attributes。现有 CLI 和结构化导入用于本地运维；新增采集结果也需要让业务读取入口看到一致状态，必要的解释信息可扩展返回。原始来源身份与 observedAt 不是通用的业务版本、完整性或成功证明。来源接口契约是兼容边界，采集、状态管理和新业务表达由实现决定。
+
+`readDailyReport(observationRepository, population)` 返回日报：cells 覆盖应报站点清单的每个站点小时，未收到为 absent、明确缺测为 missing（value 为 null、带 reason），均不是零观测；provisional 单元展示暂定值但不进 summaries。summaries 是单站日均，只有该站应报小时全部 validated 才为 ok 并以 basis 引用当前 observationId + revision，否则为 undetermined 且以 blockers 列出不能判定的单元及原因。质控修正以更高 revision 到达后，当前日报数值与 basis 引用一起更新，历史版本保留在 cells 的 revisions 中。

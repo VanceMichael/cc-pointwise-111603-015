@@ -6,6 +6,7 @@
   "scripts": {
     "test": "node --test",
     "start": "node src/cli.js",
+    "report": "node src/report-cli.js",
     "demo": "node src/demo.js",
     "acceptance": "node src/acceptance.js"
   },
